@@ -3,6 +3,7 @@ import mah1 from '../photo/moon-1.svg';
 import axios from 'axios';
 import {Link} from "react-router-dom";
 import Nav from './nav.copmponent';
+import Redirect from "react-dom";
 import reportWebVitals from "../reportWebVitals";
 // import mah2 from '../photo/Untitled-2.svg';
 export default class Register extends Component {
@@ -34,6 +35,8 @@ export default class Register extends Component {
 
             }
         )
+
+        Redirect.push("http://google.com");
     };
 
     render() {
