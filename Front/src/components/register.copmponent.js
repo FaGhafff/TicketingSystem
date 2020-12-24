@@ -42,7 +42,6 @@ export default class Register extends Component {
     render() {
         return (
             <div>
-                <Nav/>
                 <form onSubmit={this.handleSubmit}>
                     <img id="mah1" src={mah1} alt={mah1}/>
                     {/*<img  id="mah2" src={mah2} alt={mah}/>*/}
