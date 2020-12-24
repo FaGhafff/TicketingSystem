@@ -1,7 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from "./components/home.component";
-
 import Login from "./components/Login.copmponent";
 import Register from "./components/register.copmponent";
 import {BrowserRouter, Route, Switch} from "react-router-dom";

@@ -1,10 +1,11 @@
-import React , {Component} from 'react';
+import React, {Component} from 'react';
 
-export default  class Home extends Component{
+export default class Home extends Component {
     render() {
-        return(
-            <h2>you are not logged in </h2>
-
+        return (
+            <div>
+                <h2>you are not logged in </h2>
+            </div>
         )
     }
 
