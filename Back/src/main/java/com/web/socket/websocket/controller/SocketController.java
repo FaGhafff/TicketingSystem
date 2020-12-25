@@ -1,17 +1,18 @@
-package main.java.com.web.socket.websocket.controller;
+package com.web.socket.websocket.controller;
 
-import main.java.com.web.socket.websocket.bean.MessageBean;
-import main.java.com.web.socket.websocket.repositories.MessageRepository;
+import com.web.socket.websocket.bean.Message;
+import com.web.socket.websocket.repositories.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class SocketController {
 
     @Autowired
@@ -23,17 +24,16 @@ public class SocketController {
 
     @MessageMapping("/user-all")
     @SendTo("/topic/user")
-    public MessageBean sendToAll(@Payload MessageBean message) {
+    public Message sendToAll(@Payload Message message) {
         return message;
     }
 
 
     @MessageMapping("/test")
-    public List<MessageBean> sendToAli(@Payload MessageBean message) {
+    public List<Message> sendToAli(@Payload Message message) {
         template.convertAndSend("/queue/user/"+message.getDest(), message);
         repository.save(message);
 //        return repository.findByName(message.getName());
-    return null;}
-
-
+    return null;
+    }
 }

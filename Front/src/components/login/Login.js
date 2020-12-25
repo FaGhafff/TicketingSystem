@@ -13,28 +13,6 @@ class Login extends Component {
         super(props);
     }
 
-
-    handleSubmit = e => {
-        e.preventDefault();
-
-        axios.post('http://localhost:8080/login', {username: this.state.UserName, password: this.state.Password}).then(
-            res => {
-                console.log(res)
-
-            }
-        ).catch(
-            err => {
-                console.log(err.message)
-                this.setState({
-                    Message: err.message,
-                    ShowMessage: true
-                })
-
-            }
-        )
-
-    };
-
     render() {
         return (
             <div className="App">
@@ -43,8 +21,6 @@ class Login extends Component {
                         <BrowserRouter>
                                 <Switch>
                                     <Route exact path="/" component={()=><Entry />} />
-                                    <Route exact path="/forget" component={Forget} />}/>
-                                    <Route exact path="/reset" component={Reset} />}/>
                                 </Switch>
                         </BrowserRouter>
                         <div className="line"></div>

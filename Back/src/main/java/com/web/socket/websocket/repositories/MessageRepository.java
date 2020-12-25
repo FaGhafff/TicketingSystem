@@ -1,14 +1,12 @@
-package main.java.com.web.socket.websocket.repositories;
+package com.web.socket.websocket.repositories;
 
-import main.java.com.web.socket.websocket.bean.MessageBean;
-import org.springframework.data.jpa.repository.Query;
+import com.web.socket.websocket.bean.Message;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface MessageRepository extends CrudRepository<MessageBean,Integer> {
+public interface MessageRepository extends CrudRepository<Message,Integer> {
 //    @Query("select * from MessageBean where(name='name')")
-    List<MessageBean> findByNameAndDest(String name,String dest);
+    List<Message> findByNameAndDest(String name, String dest);
 
 }

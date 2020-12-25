@@ -1,4 +1,4 @@
-package main.java.com.web.socket.websocket.bean;
+package com.web.socket.websocket.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class MessageBean {
+public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
