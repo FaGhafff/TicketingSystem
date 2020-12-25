@@ -67,7 +67,8 @@ body,html,.App,#root, .auth-wrapper{
 .auth-inner{
   width: 1145px;
   height: 627px;
-  margin: auto;
+  margin: 40px 180px ;
+  /*margin: auto;*/
   background: #ffffff;
   box-shadow: 0px 14px 80px rgba(34,35,58,0.2);
   padding: 40px 55px 45px 55px ;
@@ -98,7 +99,10 @@ body,html,.App,#root, .auth-wrapper{
   color: #167bff;
 }
 .text-fild{
-  color: #167bff;
+  color: #3D3E42;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
   position: absolute;
   left: 710px;
   top: 221px;
@@ -106,9 +110,14 @@ body,html,.App,#root, .auth-wrapper{
   height: 50px;
   border:2px solid #797979;
   border-radius: 5px;
+  padding-left: 40px;
+  padding-top: 10px;
 }
 .text-fild2{
-  color: #167bff;
+  color: #3D3E42;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
   position: absolute;
   left: 710px;
   top: 324px;
@@ -116,31 +125,59 @@ body,html,.App,#root, .auth-wrapper{
   height: 50px;
   border:2px solid #797979;
   border-radius: 5px;
+  padding-left: 40px;
+  padding-top: 10px;
 }
 .text-fild3{
-  color: #167bff;
+  color: #4c4d51;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 22px;
   position: absolute;
   left: 710px;
-  top: 510px;
+  top: 470px;
   width: 385px;
   height: 50px;
   border:2px solid #797979;
   border-radius: 5px;
   background-color: #FFC731;
 }
-.line{
-  height: 513px;
-  border-left: 1px #5D5D5D solid;
+.text-fild4{
+  text-decoration: none;
+  color: #4c4d51;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
   position: absolute;
-  left: 573.5px;
-  top: 123.5px;
+  left: 710px;
+  top: 470px;
+  width: 385px;
+  height: 50px;
+  border:2px solid #797979;
+  border-radius: 5px;
+  background-color: #FFC731;
+}
+.a2{
+  text-decoration: none;
+  color: #4c4d51;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 22px;
+}
+.line{
+  height: 500px;
+  border-left: 1px rgba(93, 93, 93, 0.38) solid;
+  position: absolute;
+  left: 600px;
+  top: 95px;
 }
 #a{
   text-decoration: none;
-  color: #3D3E42;
+  font-style: italic;
+  color: #1566ff;
   position: absolute;
-  left: 970px;
-  top: 380px;
+  left: 990px;
+  top: 373px;
 }
 #logo{
   width: 400px;
@@ -220,3 +257,69 @@ img{
         transform: rotate(360deg);
     }
 }
+#usernamePhoto{
+  top: 232px;
+  left: 720px;
+  width: 24px;
+  height: 24px;
+}
+#passwordPhoto{
+  top: 335px;
+  left: 720px;
+  width: 24px;
+  height: 24px;
+}
+#facebookPhoto{
+  width: 24px;
+  height: 24px;
+  top: 538px;
+  left: 850px;
+}
+#instagramPhoto{
+  width: 24px;
+  height: 24px;
+  top: 538px;
+  left: 890px;
+}
+#twitterPhoto{
+  width: 24px;
+  height: 24px;
+  top: 538px;
+  left: 930px;
+}
+#verification{
+  width: 24px;
+  height: 24px;
+  top: 237px;
+  left: 720px;
+}
+#newpassPhoto{
+  width: 24px;
+  height: 24px;
+  top: 235px;
+  left: 720px;
+}
+/*!* The alert message box *!*/
+/*.alert {*/
+/*  padding: 20px;*/
+/*  background-color: #f44336; !* Red *!*/
+/*  color: white;*/
+/*  margin-bottom: 15px;*/
+/*}*/
+
+/*!* The close button *!*/
+/*.closebtn {*/
+/*  margin-left: 15px;*/
+/*  color: white;*/
+/*  font-weight: bold;*/
+/*  float: right;*/
+/*  font-size: 22px;*/
+/*  line-height: 20px;*/
+/*  cursor: pointer;*/
+/*  transition: 0.3s;*/
+/*}*/
+
+/*!* When moving the mouse over the close button *!*/
+/*.closebtn:hover {*/
+/*  color: black;*/
+/*}*/
