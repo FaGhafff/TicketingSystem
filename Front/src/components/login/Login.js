@@ -1,20 +1,18 @@
 import React, {Component} from 'react';
 import mah1 from '../../photo/moon-1.svg';
 import axios from 'axios';
-import {Link} from "react-router-dom";
-import Nav from '../nav.copmponent';
-import "./../../App.css"
+import {Route, BrowserRouter,Switch,Link} from "react-router-dom";
+import "./login.css"
+import Forget from "./components/Forget"
+import Entry from "./components/Entry";
+import Reset from "./components/Reset"
 
-export default class Login extends Component {
+class Login extends Component {
+    data={};
     constructor(props) {
         super(props);
-        this.state = {
-            Message: "",
-            ShowMessage: false,
-            UserName: "",
-            Password: ""
-        }
     }
+
 
     handleSubmit = e => {
         e.preventDefault();
@@ -42,30 +40,21 @@ export default class Login extends Component {
             <div className="App">
                 <div className="auth-wrapper">
                     <div className="auth-inner">
+                        <BrowserRouter>
+                                <Switch>
+                                    <Route exact path="/" component={()=><Entry />} />
+                                    <Route exact path="/forget" component={Forget} />}/>
+                                    <Route exact path="/reset" component={Reset} />}/>
+                                </Switch>
+                        </BrowserRouter>
+                        <div className="line"></div>
                         <div>
-                            <form onSubmit={this.handleSubmit}>
-                                <img id="mah1" src={mah1} alt={mah1}/>
-                                {/*<img  id="mah2" src={mah2} alt={mah}/>*/}
-                                <div className="form-group">
-                                    <input type="text" className="text-fild" placeholder="User Name"
-                                           onChange={e => this.setState({Username: e.target.value})}/>
-                                </div>
-                                <div className="form-group">
-                                    <input type="password" className="text-fild2" placeholder="Password"
-                                           onChange={e => this.setState({Password: e.target.value})}/>
-                                </div>
-
-                                <button className="text-fild3">Login</button>
-                                <div className="line"></div>
-                                <p className="forget-password text-right">
-                                    <Link to={'/forget'}><a id="a">forget password ?</a></Link>
-                                </p>
-                            </form>
+                            <img id="mah1" src={mah1} alt={mah1}/>
                         </div>
                     </div>
                 </div>
             </div>
         )
     }
-
 }
+export default Login
